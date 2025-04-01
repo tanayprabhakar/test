@@ -1,0 +1,940 @@
+<!doctype html>
+<html lang="en">
+
+
+<!-- Mirrored from upesacm.org/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 Jun 2020 13:27:45 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>UPES ACM-W Student Chapter</title>
+    <link rel="icon" href="img/logoacm.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Poppins|Roboto&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/button_effects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+    <link rel="stylesheet" href="css/testimonial.css">
+    <script src="../kit.fontawesome.com/522aed4c91.js" crossorigin="anonymous"></script>
+</head>
+<style>
+#chat,
+    #chat:after,
+    .chatbox {
+        transition: all 0.4s ease-in-out;
+    }
+    
+    #chat,
+    #close-chat,
+    .minim-button,
+    .maxi-button,
+    .chat-text {
+        font-weight: 700;
+        cursor: pointer;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        height: 20px;
+        line-height: 20px;
+    }
+    
+    #chat,
+    #close-chat,
+    .chatbox {
+        border: 1px solid #a8a8a8;
+    }
+    
+    #chat:after,
+    #chat:before {
+        position: absolute;
+        border-style: solid;
+        content: "";
+    }
+    
+    .chatbox {
+        position: fixed;
+        bottom: 0px;
+        right: 5px;
+        margin: 0 0 -2500px;
+        background: #fff;
+        border-bottom: none;
+        padding: 28px 10px 10px;
+        z-index: 100000;
+    }
+    
+    #close-chat {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        font-size: 24px;
+        border: none;
+        width: 20px;
+        color: #ff003b;
+        z-index: 2;
+    }
+    
+    #minim-chat,
+    #maxi-chat {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 20px;
+        line-height: 20px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    
+    .minim-button {
+        position: absolute;
+        top: 2px;
+        right: 26px;
+        font-size: 24px;
+        border: 1px solid #dedede;
+        width: 20px;
+        background: #fefefe;
+    }
+    
+    .maxi-button {
+        position: absolute;
+        top: 2px;
+        right: 26px;
+        font-size: 24px;
+        border: 1px solid #dedede;
+        width: 20px;
+        background: #fefefe;
+    }
+    
+    .chat-text {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        font-size: 16px;
+    }
+    
+    #chat {
+        width: 40px;
+        border-radius: 3px;
+        padding: 2px 8px;
+        font-size: 12px;
+        background: #fff;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        top: -10px;
+    }
+    
+    #chat:before {
+        border-width: 10px 11px 0 0;
+        border-color: #a8a8a8 transparent transparent;
+        left: 7px;
+    }
+    
+    #chat:after {
+        border-width: 9px 8px 0 0;
+        border-color: #fff transparent transparent;
+        left: 8px;
+    }
+
+@-webkit-keyframes tada {
+    0% {
+        -webkit-transform: scale(1);
+    }
+    
+    10%,
+    20% {
+        -webkit-transform: scale(0.9)rotate(-3deg);
+    }
+    
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: scale(1.1)rotate(3deg);
+    }
+    
+    40%,
+    60%,
+    80% {
+        -webkit-transform: scale(1.1)rotate(-3deg);
+    }
+    
+    100% {
+        -webkit-transform: scale(1)rotate(0);
+    }
+}
+@keyframes tada {
+    0% {
+        transform: scale(1);
+    }
+    
+    10%,
+    20% {
+        transform: scale(0.9)rotate(-3deg);
+    }
+    
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: scale(1.1)rotate(3deg);
+    }
+    
+    40%,
+    60%,
+    80% {
+        transform: scale(1.1)rotate(-3deg);
+    }
+    
+    100% {
+        transform: scale(1)rotate(0);
+    }
+}
+.tada {
+    -webkit-animation-name: tada;
+    animation-name: tada;
+}
+@-webkit-keyframes hvr-pulse-grow {
+    to {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+}
+@keyframes hvr-pulse-grow {
+    to {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+}
+#aaa {
+    width: 100%;
+    height: 100%;
+}
+@media only screen and (min-width: 1224px) {
+    #chatt {
+        width: 60vh;
+        height: 80vh;
+    }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    #chatt {
+        width: 40vh;
+        height: 70vh;
+    }
+}
+#btn {
+    position: fixed;
+    /* Fixed/sticky position */
+    
+    bottom: 15px;
+    /* Place the button at the bottom of the page */
+    
+    right: 25px;
+    /* Place the button 30px from the right */
+    
+    z-index: 99;
+    /* Make sure it does not overlap */
+    
+    border: none;
+    /* Remove borders */
+    
+    outline: none;
+    /* Remove outline */
+    
+    background-color: #9b84f4;
+    /* Set a background color */
+    
+    color: white;
+    /* Text color */
+    
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    
+    padding: 8px;
+    /* Some padding */
+    
+    border-radius: 50%;
+    /* Rounded corners */
+    
+    height: 50px;
+    width: 50px;
+    font-size: 2vh;
+    /* Increase font size */
+}
+.navbar-light .navbar-nav .active>.nav-link {
+    text-shadow: 4px 3px 4px #80808055;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* #nexus {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 8px 6px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+} */
+
+.nav {
+    margin-right: 150px;
+}
+</style>
+
+
+
+<body>
+    <!--::header part start::-->
+    <header class="main_menu home_menu">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a class="navbar-brand" href="index.html"> <img style="width:150px;display:block;" src="img/ACM.png" alt="logo"> </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+                        <div class="collapse navbar-collapse main-menu-item justify-content-center nav" id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active ">
+                                    <a class="nav-link" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item  active ">
+                                    <a class="nav-link" href="about.html">About</a>
+                                </li>
+                               <!-- <li class="nav-item active ">
+                                   <a class="nav-link btn" id="nexus" href="prodigy/index.html">Prodigy 2024</a>
+                                </li>-->
+                                <li class="nav-item  active ">
+                                    <a class="nav-link" href="gallery.html">Gallery</a>
+                                </li>
+                                <!-- <li class="nav-item active ">
+                                    <a class="nav-link" target="_blank" href="csr/index.html">CSR</a>
+                                </li> -->
+                                <li class="nav-item active ">
+                                    <a class="nav-link" target="_blank" href="https://konfhub.com/upes-acm-acm-w-member-registration">Membership</a>
+                                </li>
+                                <li class="nav-item active ">
+                                    <a class="nav-link" href="team.html">Team</a>
+                                </li>
+                                <li class="nav-item active ">
+                                    <a class="nav-link" href="contact.html">Contact</a>
+                                </li>
+                                <li class="nav-item active ">
+                                    <a class="nav-link" href="odyssey/">Odyssey</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header part end-->
+    <!-- banner part start-->
+    <section class="banner_part">
+        <div class="hero-image">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-xl-6 col-md-6">
+                        <div class="banner_text">
+                            <div class="banner_text_iner text-center banner_one">
+                                <h3>WELCOME TO </h3><br>
+                                <h2>UPES ACM-W</h2>
+                                <div>
+                                    <a href="https://konfhub.com/upes-acm-acm-w-member-registration" target="_blank" class="nbutton">Become a Member<i class="ti-angle-right"></i> </a>
+                                <a href="https://www.upesacm.org/" target="_blank" class="nbutton">Visit UPES ACM<i class="ti-angle-right"></i> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-md-6">
+                        <div class="banner_bg banner_two">
+                            <img src="img/index_bgtry.png" alt="banner" style="-webkit-filter: saturate(8); filter: saturate(1.4);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-app-1 custom-animation"><img src="img/animate_icon/icon_1.png" alt=""></div>
+        <div class="hero-app-5 custom-animation2"><img src="img/animate_icon/icon_3.png" alt=""></div>
+        <div class="hero-app-7 custom-animation3"><img src="img/animate_icon/icon_2.png" alt=""></div>
+        <div class="hero-app-8 custom-animation"><img src="img/animate_icon/icon_4.png" alt=""></div>
+    </section>
+    <!-- banner part start-->
+<!-- about part start-->
+<section class="about_part">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-lg-5">
+                <div class="about_img">
+
+                    <img src="img/group.jpeg" class="img-responsive img_1" alt="ACM_TEAM">
+                    <h2>The Largest Computing<br> Society,&nbsp;now at UPES</h2>
+                </div>
+            </div>
+            <div class="offset-lg-1 col-lg-4">
+                <div class="about_text">
+                    <h3 style="color:#795CC1">About</h3>
+                    <h2>WE ARE UPES ACM-W STUDENT CHAPTER</h2>
+                    <h4 align="justify">UPES ACM-W is an associated student chapter established 5 years after UPES ACM, with the prime objective of empowering women in technology while promoting practical technological knowledge in young university students.</h4>
+                    <p align="justify"> We work round-the-clock to hone the adroit programmer in our girl members through many events, workshops, fests, contests, and talks all year long. Our student body is headed by confident and proficient members who work seamlessly for this cause.  </p>
+                    <a href="about.html" class="nbutton">LEARN MORE<i class="ti-angle-right"></i> </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-app-7 custom-animation"><img src="img/animate_icon/icon_7.png" alt=""></div>
+    <div class="hero-app-8 custom-animation2"><img src="img/animate_icon/icon_4.png" alt=""></div>
+    <div class="hero-app-6 custom-animation3"><img src="img/animate_icon/icon_5.png" alt=""></div>
+</section>
+<!-- about part ENDS-->
+    <!-- cta part start-->
+    <section class="cta_part ">
+        <div class="container" style="margin-top:-80px;">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="cta_part_iner">
+                        <div class="cta_part_text">
+                            <h1>INITIATIVES</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- cta part end-->
+
+    <!-- initiative_part part start-->
+    <section class="service_part section_bg_2 section_padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single_service_part">
+                        <div class="single_service_part_iner">
+                            <span><i class="fas fa-chalkboard-teacher"></i></span>
+                            <h3>21 Days Of Code</h3>
+                            <p>We launched 21 Days of Code to promote the environment for competitive programming and instil coding as second nature and a daily habit for 21 regular days. Every year, we witness active programmers come along with the spirit to learn, code and practice. </p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single_service_part">
+                        <div class="single_service_part_iner">
+                            <span><i class="fas fa-laptop-code"></i></span>
+                            <h3>CODE ANYTIME</h3>
+                            <p>Code Anytime is our round-the-year initiative to encourage free-spirited coding among beginners to amplify their passion for programming.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single_service_part">
+                        <div class="single_service_part_iner">
+                            <span><i class="fab fa-cuttlefish"></i></span>
+                            <h3>SPY-C</h3>
+                            <p>SPY-C is an initiative to build the core foundation of programming and aid students in overcoming their dread of programming by perfecting their knowledge of the C language through the help of their seniors.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single_service_part">
+                        <div class="single_service_part_iner">
+                            <span><img src="img/CSR31.png"></span>
+                            <h3>Hour Of Code</h3>
+                            <p>The CSR team puts their words to action, and brings smiles across the faces of the underprivileged society. The team parts education in the most exciting manner and makes the activities as interactive and intriguing as possible.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- initiative_part part end-->
+
+    
+    <!-- service_part start-->
+    <section class="our_latest_work section_padding">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="single_work">
+                        <div class="row align-items-center">
+                            <div class="offset-lg-1 col-lg-4 col-md-6">
+                                <div class="single_work_demo">
+                                    <h2 style="color:#795CC1">Achievements</h2>
+                                    <ul>
+                                        <li style="margin-top: 20px;">
+                                            <h4 class="bold">Outstanding Chapter Award - 2023</h4>
+                                            - Awarded by ACM India<br>
+                                        </li><br>
+                                        <li>
+                                            <h4>Best Student Chapter Award for Outstanding Community Service - 2021</h4>
+                                            - Awarded by ACM India<br>
+                                        </li><br>
+                                        <li>
+                                            <h4>Student Chapter Excellence Award Winners for Outstanding Chapter Activities - 2020</h4>
+                                            <p> - Awarded by ACM International</p>
+                                        </li><br>
+                                        <li>
+                                            <h4>Best Student Chapter Award (Runner Up) - 2016</h4>
+                                            <p> - Awarded by ACM India</p>
+                                        </li><br>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="offset-lg-1 col-lg-6 col-md-6">
+                                <div class="demo_img">
+                                    <img src="img/animate_icon/achievments.gif" class="img-responsive" alt="demo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="single_work">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="demo_img">
+                                    <img src="img/CSR%20Collage.jpg" class="img-responsive" alt="demo">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="single_work_demo">
+
+                                    <h2 style="color:#00a6ff">Corporate Social Responsibility</h2>
+                                    <h3 align="justify">“Talent wins games, but teamwork and intelligence win championships.” <br> ― Michael Jordan</h3>
+
+
+
+                                    <p align="justify">On June 15th, the CSR Team of UPES ACM-W visited the Kalyan Smiti, an NGO in Delhi, conducting an event outside of Dehradun for the very first time. The team of volunteers taught high school girls about the basics of
+                                        computers and various other application software during two highly interactive sessions. It was an enlightening session filled with knowledge and fun. The session was a complete success due to the efforts of the
+                                        various volunteers and the Heads, but the key to our success was the enthusiasm of the girls who were bright, engaging and eager to learn. We were encouraged to walk on our chosen path by Kalyan Smiti, a dedicated
+                                        NGO. </p>
+                                    <a href="csr/index.html" class="nbutton" target="_blank">LEARN MORE<span class="ti-angle-right"></span> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- <div class="single_work">
+                        <div class="row align-items-center">
+                            <div class="offset-lg-1 col-lg-4 col-md-6">
+                                <div class="single_work_demo">
+
+                                    <h2 style="color:#00a6ff">Code Anytime</h2>
+                                    <h3>“Everybody in this country should learn to program a computer, because it teaches you how to think” <br> ― Steve Jobs</h3>
+
+                                    <p align="justify">Code anytime, an initiative augmented by UPES ACM and ACM-W in an effort to develop a coding culture within campus. It's an open minded atmosphere where there is room for error and ample opportunities to learn. In lieu
+                                        of a student-teacher dynamic, we've chosen to build an environment where students themselves are pushed to harness their inner coder. They are encouraged to come forward with any programming language related queries,
+                                        get their doubts cleared and master the language. There are no barriers; anyone and everyone is welcome. It's a platform where everyone is provided with the opportunity to code, learn and grow
+                                    </p>
+
+
+                                </div>
+                            </div>
+                            <div class="offset-lg-1 col-lg-6 col-md-6">
+                                <div class="demo_img">
+                                    <img src="img/meet.jpg" class="img-responsive" alt="demo">
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- upcoming_event part start-->
+
+    <!-- happy_client counter start -->
+    <section class="happy_client">
+        <div class="container">
+            <div class="row new-row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single_happy_client">
+                        <img src="img/icon/balloons.svg" alt="cap">
+                        <span class="counter ">2015</span>
+                        <h4>YEAR<br>OF ESTB.</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single_happy_client">
+                        <img src="img/icon/award.svg" alt="cap">
+                        <span class="counter">3</span>
+                        <h4 style="margin-left: -20px">AWARDS<br>WON</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single_happy_client">
+                        <img src="img/icon/team.svg" alt="cap">
+                        <span class="counter">550</span>
+                        <h4>HAPPY<br>MEMBERS</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single_happy_client">
+                        <img src="img/icon/tea.svg" alt="cap">
+                        <span class="counter">900</span>
+                        <h4>CUPS<br>OF COFFEE</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- happy_client counter end -->
+    <!--::review_part start::-->
+    <section class="review_part padding_top">
+        <div class="container-fluid" style="margin-top:-50px;">
+            <div class="row justify-content-center">
+                <div class="col-lg-5">
+                    <div class="section_tittle text-center">
+                        <h1>See what our Executives have to say</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <div class="intro_video_bg">
+                        <div class="intro_video_iner text-center">
+                            <div class="intro_video_icon">
+                                <a id="play-video_1" class="video-play-button popup-youtube" href="https://www.youtube.com/watch?v=99CM7sUsnT0">
+                                    <span class="ti-control-play"></span>
+                                </a>
+                            </div>
+                            <p>We are ACM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 col-lg-5">
+                    <div class="row">
+                        <div class="col-md-12 testimonial_container">
+                            <div id="testimonial-slider" class="owl-carousel">
+                                <div class="testimonial">
+                                    <div class="pic">
+                                        <img src="img/comment/sachi.jpg" alt="">
+                                    </div>
+                                    <p class="description">
+                                        It has been 5 years since I joined UPES ACM-W, and these past few years have been exciting and extremely successful for us. We have won several national and international awards for our hard work. Our annual event,
+                                        Prodigy, has been a massive success for the past five years and I'm proud to say that UPES ACM hasn't ever hesitated from helping whenever possible, which can be seen in our outstanding CSR events and the collaborations
+                                        we have. Being a part of ACM ensures that everyone can showcase what they're good at and constantly evolve. We strive to create a better environment for our members with every action of ours.
+                                    </p>
+                                    <h3 class="testimonial-title">Mrs. Sachi Chaudhary - Faculty Sponsor,&nbsp; UPES ACM-W</h3>
+                                </div>
+                                <div class="testimonial">
+                                    <div class="pic">
+                                        <img src="img/comment/Kavya.jpg" alt="">
+                                    </div>
+                                    <p class="description">
+                                        When I was exposed to ACM and the ACM-W student organisation at UPES, my programming career had just started. Where I used to frequently get confused between the fundamentals of coding, activities like 21 Days of Code, Code Anytime, and Spy C increased my confidence in coding, that’s when I decided to continue my career with ACM and the ACM-W student chapter. 
+                                        Being a part of ACM-W gives me a great deal of pleasure because what more could you ask for from a student chapter than a chapter that teaches you a lot about your skill, and not just the skill, but how to deal with public relations, how to organise events as a team, and much more.
+                                        I'm happy to be a part of this vibrant student chapter.
+                                    </p>
+                                    <h3 class="testimonial-title">Kavya Chugh - Chairperson,&nbsp; UPES ACM-W</h3>
+                                </div>
+                 
+                                <div class="testimonial">
+                                    <div class="pic">
+                                        <img src="img/comment/aashisha1.jpg" alt="">
+                                    </div>
+                                    <p class="description">
+                                        I have been associated with the chapter since my first year in college. It's been almost three years now, and the journey has been great. From being the core committee member to the Joint Event Head and now representing the chapter as the Chairperson, has been really wonderful. UPES ACM & ACM-W is not only a student chapter but a family that brings the best out of you. We organize a variety of events ranging from technical, fun-tech and gaming events. Our coding initiatives such as the 21 Days of Code, Code Anytime and Spy-C have had great impact on the university students. We aim at coming together, being dedicated, growing together and contributing to the technical fraternity for the years to come.
+                                    </p>
+                                    <h3 class="testimonial-title">Aashisha Negi - BOE,&nbsp; UPES ACM-W</h3>
+                                </div>
+                 
+                                <div class="testimonial">
+                                    <div class="pic">
+                                        <img src="img/comment/Riddhi1.jpg" alt="">
+                                    </div>
+                                    <p class="description">
+                                        Over the course of two years, my involvement with the UPES ACM-W Student Chapter has been an invaluable and transformative experience. The chapter, has provided me with numerous opportunities for growth, learning, and networking within the field of computer science.
+                                        It has fostered a supportive and inclusive community for women in computing. Through regular meetings, workshops, and events, the chapter has created a space where I felt comfortable expressing my ideas, asking questions. Furthermore, the chapter has emphasized the importance of professional development and leadership skills.
+                                    </p>
+                                    <h3 class="testimonial-title">Riddhi Jain - BOE,&nbsp; UPES ACM-W</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--::blog_part end::-->
+
+
+    <!-- cta part start-->
+    <!-- <section class="cta_part">
+        <div class="container" style="margin-top:-50px;">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="cta_part_iner">
+                        <div class="cta_part_text">
+
+                            <h1>ACM Executives</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- cta part end-->
+    <!-- team_member part start-->
+    <!-- <section class="team_member_section section_padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single_team_member">
+                        <img src="img/executives/pankajbadonisir.jpg" style="height: 240px; object-fit: cover; object-position: 50% 20%;" alt="">
+                        <div class="single_team_text">
+                            <h3><a href="#">Pankaj Badoni</a></h3>
+                            <p>Faculty Sponsor</p>
+                            <div class="social_icon">
+                                <a target="_blank" href="https://www.linkedin.com/in/pankaj-badoni-64b7979b"> <i class="ti-linkedin"></i> </a>
+                                <a target="_blank" href="https://www.instagram.com/badoni18pankazzz"> <i class="ti-instagram"></i> </a>
+                                <a target="_blank" href="https://www.facebook.com/toni.badoni"> <i class="ti-facebook"></i> </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single_team_member">
+                        <img src="img/executives/sanskritipandey.jpg" style="height: 240px; object-fit: cover; object-position: 50% 20%;" alt="">
+                        <div class="single_team_text">
+                            <h3><a href="#">Sanskriti Pandey</a></h3>
+                            <p> Chairperson,&nbsp;UPES ACM</p>
+                            <div class="social_icon">
+                                <a target="_blank" href="https://www.linkedin.com/in/sanskriti-pandey-995296186/"> <i class="ti-linkedin"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single_team_member">
+                        <img src="img/executives/tejastrivedi.jpg" style="height: 240px; object-fit: cover; object-position: 50% 20%;" alt="">
+                        <div class="single_team_text">
+                            <h3><a href="#">Tejas Trivedi</a></h3>
+                            <p> Vice Chairperson,&nbsp;UPES ACM</p>
+                            <div class="social_icon">
+                                <a target="_blank" href="https://www.linkedin.com/in/tejas-trivedi-02b991194/"> <i class="ti-linkedin"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single_team_member">
+                        <img src="img/executives/arjunsinghahluwalia.jpg" style="height: 240px; object-fit: cover; object-position: 50% 20%;" alt="">
+                        <div class="single_team_text">
+                            <h3><a href="#">Arjun Singh Ahluwalia</a></h3>
+                            <p> Secretary,&nbsp;UPES ACM</p>
+                            <div class="social_icon">
+                                <a target="_blank" href="https://www.linkedin.com/in/arjun-ahluwalia-504271121/"> <i class="ti-linkedin"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single_team_member">
+                        <img src="img/executives/ayushkumar.jpg" style="height: 240px; object-fit: cover; object-position: 50% 50%;" alt="">
+                        <div class="single_team_text">
+                            <h3><a href="#">Ayush Kumar</a></h3>
+                            <p> Joint Secretary,&nbsp;UPES ACM</p>
+                            <div class="social_icon">
+                                <a target="_blank" href="https://www.linkedin.com/in/ayush-kumar-2665811b2/"> <i class="ti-linkedin"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single_team_member">
+                        <img src="img/executives/riddhisingh.jpg" style="height: 240px; object-fit: cover; object-position: 50% 20%;" alt="">
+                        <div class="single_team_text">
+                            <h3><a href="#">Riddhi Singh</a></h3>
+                            <p> Treasurer,&nbsp;UPES ACM</p>
+                            <div class="social_icon">
+                                <a target="_blank" href="https://www.linkedin.com/in/riddhi-singh-12aba1102/"> <i class="ti-linkedin"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section> -->
+
+    <!-- maps part end-->
+
+    <!-- <section class="service_part section_bg_2 section_padding">
+        <div class="cta_part_text">
+            <h1 style="text-align:center; padding-bottom: 60px; color: white; font-weight: 700; font-size: 40px;">Our Location</h1>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3440.710862751274!2d77.9646442148849!3d30.415944281748757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3908d4890d7c1735%3A0x22d3ae324c238e3c!2sUniversity%20of%20Petroleum%20and%20Energy%20Studies%20-%20UPES!5e0!3m2!1sen!2sin!4v1584886323810!5m2!1sen!2sin"
+            width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </section> -->
+
+    <!-- maps part end-->
+
+
+    <!-- footer part start-->
+    <div>
+        <svg
+          class="waves"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28"
+          preserveAspectRatio="none"
+          shape-rendering="auto"
+        >
+          <defs>
+            <path
+              id="gentle-wave"
+              d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+            />
+          </defs>
+          <g class="parallax">
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="0"
+              fill="rgba(175, 141, 245, 1)"
+            />
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="3"
+              fill="rgba(135, 101, 193, 1)"
+            />
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="5"
+              fill="rgba(95, 61, 141, 1)"
+            />
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="7"
+              fill="rgba(45, 21, 89, 1)"
+            />
+          </g>
+        </svg>
+      </div>
+      <!--Waves end-->
+    </div>
+    <!--Header ends-->
+
+    <!--footercontent starts-->
+    <div class="footercontent footerflex">
+        <div>
+            <a href="index.html"><img src="img/logoacm.png" alt="" style="height: 80px"></a>
+        </div>
+        <ul class="footermenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="https://konfhub.com/upes-acm-acm-w-member-registration">Membership</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+      <ul class="footersocialicon">
+        <li>
+          <a href="https://www.facebook.com/upesacmw/"><ion-icon name="logo-facebook"></ion-icon></a>
+        </li>
+        <li>
+          <a href="https://x.com/upesacm?lang=en"><ion-icon name="logo-twitter"></ion-icon></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/upesacmwomen/"><ion-icon name="logo-instagram"></ion-icon></a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/channel/UCaUFOX5cSycV23KhG_WEsag"><ion-icon name="logo-youtube"></ion-icon></a>
+        </li>
+      </ul>
+
+    </div>
+    <div class="footercontent footerflex footercontentafter" style="justify-content: center; padding: 0;margin: 0; height: 60px">
+    <ul class="footermenuafter">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="https://konfhub.com/upes-acm-acm-w-member-registration">Membership</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footercontent footerflex" style="justify-content: center; padding: 0;margin: 0; height: 60px;">
+    <p class="footercopyright">
+        Copyright © <script>
+            document.write(new Date().getFullYear());
+        </script>  All rights reserved | Designed and Developed by UPES
+        ACM-W Web Development Team
+      </p>
+    </div>
+    <!-- footer part end-->
+
+    <!-- jquery plugins here-->
+    <!-- jquery -->
+    <script src="js/jquery-1.12.1.min.js"></script>
+    <!-- popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- easing js -->
+    <script src="js/jquery.magnific-popup.js"></script>
+    <!-- swiper js -->
+    <script src="js/swiper.min.js"></script>
+    <!-- swiper js -->
+    <script src="js/masonry.pkgd.js"></script>
+    <!-- particles js -->
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/owl.carousel2.thumbs.min.js"></script>
+    <!-- swiper js -->
+    <script src="js/slick.min.js"></script>
+    <!-- custom js -->
+    <script src="js/custom.js"></script>
+     <!--social icons-->
+     <script
+     type="module"
+     src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+   ></script>
+   <script
+     nomodule
+     src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+   ></script>
+   <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    <script src="js/testimonial.js"></script>
+</body>
+
+
+<!-- Mirrored from upesacm.org/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 Jun 2020 13:28:12 GMT -->
+</html>
